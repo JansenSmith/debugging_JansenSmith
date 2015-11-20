@@ -8,6 +8,7 @@ CSG sphere = new Sphere(size/20*12.5).toCSG()
 // perform a union
 CSG cubePlusSphere = cube.difference(sphere);
 //You can return a CSG and set colors as a form a debugging
-return cubePlusSphere.setColor(javafx.scene.paint.Color.CYAN);
+cubePlusSphere.setColor(javafx.scene.paint.Color.CYAN);
+return cubePlusSphere;
 
 return [cubePlusSphere , cube.movex(size*1.5), sphere.movey(size*1.5)]
