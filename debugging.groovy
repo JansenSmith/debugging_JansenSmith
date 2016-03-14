@@ -5,11 +5,12 @@ CSG cube = new Cube(	size,// X dimention
 			).toCSG()
 //create a sphere
 CSG sphere = new Sphere(size/20*12.5).toCSG()
+BowlerStudioController.setCsg(sphere,null)
 // perform a union
 CSG cubePlusSphere = cube.difference(sphere);
 //You can return a CSG and set colors as a form a debugging
 cubePlusSphere.setColor(javafx.scene.paint.Color.CYAN);
 //returning early displays just this item
-return cubePlusSphere;
+BowlerStudioController.addCsg(cubePlusSphere)
 
 return [cubePlusSphere , cube.movex(size*1.5), sphere.movey(size*1.5)]
