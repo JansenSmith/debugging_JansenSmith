@@ -9,6 +9,7 @@ BowlerStudioController.setCsg(sphere,null)
 // perform a union
 CSG cubePlusSphere = cube.difference(sphere);
 //You can return a CSG and set colors as a form a debugging
+// Options: https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html
 cubePlusSphere.setColor(javafx.scene.paint.Color.CYAN);
 //returning early displays just this item
 BowlerStudioController.addCsg(cubePlusSphere)
